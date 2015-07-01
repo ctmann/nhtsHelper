@@ -74,7 +74,7 @@ swap_pa <- function(df){
 #' This function requires a `home_codes`
 #' object be included in the project environment.
 
-#' @param type a vector of activity codes as found in the NHTS \code{WHYTO} or
+#' @param codes a vector of activity codes as found in the NHTS \code{WHYTO} or
 #'   \code{WHYFROM} variables.
 #'
 #' @return a vector of activity codes using the following types:

@@ -14,14 +14,14 @@ crosstable(df, var1, var2, weight_var = NULL, margins = FALSE,
 
 \item{var2}{a field in \code{df} that will make the columns of the table.}
 
+\item{weight_var}{a field in \code{df} that weights the data. If
+\code{NULL}, will treat each record equally.}
+
 \item{margins}{boolean, should the row and column sums be appended?
 default \code{FALSE}}
 
 \item{percent}{boolean, should the table be a percentage?
   default \code{FALSE}}
-
-\item{weight_vart}{a field in \code{df} that weights the data. If
-\code{NULL}, will treat each record equally.}
 }
 \value{
 an array that can be cast with \code{kable()} or examined directly.

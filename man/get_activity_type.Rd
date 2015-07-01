@@ -7,7 +7,7 @@
 get_activity_type(codes)
 }
 \arguments{
-\item{type}{a vector of activity codes as found in the NHTS \code{WHYTO} or
+\item{codes}{a vector of activity codes as found in the NHTS \code{WHYTO} or
   \code{WHYFROM} variables.}
 }
 \value{
