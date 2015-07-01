@@ -54,7 +54,7 @@ get_trip_purpose <- function(o_purp, d_purp){
 #' @param df a trips record data_frame
 #'
 #' @return a data_frame with the p and a block and taz appended
-#'
+#' @import dplyr
 swap_pa <- function(df){
 
   df %>%
@@ -80,7 +80,7 @@ swap_pa <- function(df){
 #' @return a vector of activity codes using the following types:
 #'   \code{home, work, school, pudo, other}
 #'
-#'
+#' @import dplyr
 get_activity_type <- function(codes){
 
   purpose_codes <- data_frame(
