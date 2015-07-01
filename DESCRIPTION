@@ -1,0 +1,11 @@
+Package: nhtsHelper
+Title: What the Package Does (one line, title case)
+Version: 0.1.0
+Authors@R: person("Greg", "Macfarlane", email = "gregmacfarlane@gmail.com", role = c("aut", "cre"))
+Description: What the package does (one paragraph)
+Depends: R (>= 3.2.0)
+License: MIT + file LICENSE
+Imports:
+    dplyr,
+    tidyr
+LazyData: true
