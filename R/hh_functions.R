@@ -1,7 +1,7 @@
 #' Get the market segment
 #'
 #' @param vehicles vector with the number of vehicles in the household.
-#' @parma people vector with the number of people to compare against the number
+#' @param people vector with the number of people to compare against the number
 #'   of vehicles.
 #'
 #' @return a vector with the market segment the household belongs to.
