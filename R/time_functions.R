@@ -5,6 +5,8 @@
 #' @param end the end of the window
 #'
 #' @return boolean, whether the time falls inside the window.
+#' 
+#' @export
 check_between <- function(time, start, end){
   start <- get_mins_from_4am(start)
   end <- get_mins_from_4am(end)
@@ -21,6 +23,8 @@ check_between <- function(time, start, end){
 #' @param end a vector of end times in military time.
 #'
 #' @return the elapsed minutes between the times
+#' 
+#' @export
 get_duration <- function(start, end){
   # difference of times converted from military
   get_mins_from_4am(end) - get_mins_from_4am(start)
@@ -37,6 +41,8 @@ get_duration <- function(start, end){
 #' @param x a character string in military time, e.g. `1523` is 3:23 pm.
 #'
 #' @return the number of minutes after 4 am.
+#' 
+#' @export
 get_mins_from_4am <- function(x){
   hours   <- as.numeric(substr(x, 1, 2))
   minutes <- as.numeric(substr(x, 3, 4))
@@ -55,6 +61,8 @@ get_mins_from_4am <- function(x){
 #'   4 am.
 #' @return a character vector expressing the number of elapsed minutes in
 #' military time.
+#' 
+#' @export
 get_military_time <- function(x){
   x <- x %% 1440
 

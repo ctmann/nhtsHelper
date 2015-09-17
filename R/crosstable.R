@@ -15,6 +15,7 @@
 #'
 #' @import dplyr
 #' @import tidyr
+#' @export
 crosstable <- function(df, var1, var2, weight_var = NULL,
                        margins = FALSE, percent = FALSE){
 
@@ -46,6 +47,8 @@ crosstable <- function(df, var1, var2, weight_var = NULL,
      colnames(m)[ncol(m)] <- paste(var1, "total")
      rownames(m)[nrow(m)] <- paste(var2, "total")
    }
+   
+   
 
    return(m)
 }

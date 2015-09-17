@@ -10,6 +10,8 @@
 #'
 #' @return a vector of trip purposes on the following classification:
 #'   \code{hbw, hbo, hbschool, nhbo, nhbw}
+#'   
+#' @export
 get_trip_purpose <- function(o_purp, d_purp){
 
   purpose <- ifelse(
@@ -55,6 +57,8 @@ get_trip_purpose <- function(o_purp, d_purp){
 #'
 #' @return a data_frame with the p and a block and taz appended
 #' @import dplyr
+#' 
+#' @export
 swap_pa <- function(df){
 
   df %>%
@@ -81,6 +85,8 @@ swap_pa <- function(df){
 #'   \code{home, work, school, pudo, other}
 #'
 #' @import dplyr
+#' 
+#' @export
 get_activity_type <- function(codes){
 
   purpose_codes <- data_frame(
@@ -111,6 +117,8 @@ get_activity_type <- function(codes){
 #' @param end
 #'
 #' @return boolean vector, TRUE if the record should be dropped.
+#' 
+#' @export
 determine_linkout <- function(purpose, start, end){
 
   linkout <- ifelse(
