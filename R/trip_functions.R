@@ -29,8 +29,15 @@ get_trip_purpose <- function(o_purp, d_purp){
         # is there a school end?
         o_purp %in% school_codes | d_purp %in% school_codes,
         "hbschool",
-        # else, home-based other
-        "hbo"
+        
+        ifelse(
+          # is there a shopping end?
+          o_purp %in% shop_codes | d_purp %in% shop_codes,
+          "hbshop",
+          
+          # else home-based other
+          "hbo"
+        ) 
       )
     ),
 
@@ -90,12 +97,13 @@ swap_pa <- function(df){
 get_activity_type <- function(codes){
 
   purpose_codes <- data_frame(
-    codes = c(home_codes, work_codes, school_codes, pudo_codes),
+    codes = c(home_codes, work_codes, school_codes, pudo_codes, shop_codes),
     purpose = c(
       rep("home", length(home_codes)),
       rep("work", length(work_codes)),
       rep("school", length(school_codes)),
-      rep("pudo", length(pudo_codes))
+      rep("pudo", length(pudo_codes)),
+      rep("shop", length(shop_codes))
     )
   )
 
