@@ -4,14 +4,16 @@
 \alias{determine_linkout}
 \title{Determine whether to link out the activity.}
 \usage{
-determine_linkout(purpose, start, end)
+determine_linkout(purpose, start, end, duration)
 }
 \arguments{
-\item{purpose}{}
+\item{purpose}{Trip purpose vector}
 
-\item{start}{}
+\item{start}{Trip start time}
 
-\item{end}{}
+\item{end}{Trip end time}
+
+\item{duration}{Length of time in minutes for minimum linkout time.}
 }
 \value{
 boolean vector, TRUE if the record should be dropped.
