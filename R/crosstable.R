@@ -14,7 +14,7 @@
 #' @return an array that can be cast with \code{kable()} or examined directly.
 #'
 #' @import dplyr
-#' @import tidyr
+#' @importFrom tidyr spread
 #' @export
 crosstable <- function(df, var1, var2, weight_var = NULL,
                        margins = FALSE, percent = FALSE){
@@ -28,7 +28,7 @@ crosstable <- function(df, var1, var2, weight_var = NULL,
     ) %>%
     group_by(v1, v2) %>%
     summarise(n = sum(weight)) %>%
-    spread(v2, n, fill = 0)
+    tidyr::spread(v2, n, fill = 0)
 
    m <- as.matrix(a[, -1])
 
