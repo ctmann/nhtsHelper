@@ -8,14 +8,14 @@ get_activity_type(codes)
 }
 \arguments{
 \item{codes}{a vector of activity codes as found in the NHTS \code{WHYTO} or
-  \code{WHYFROM} variables.}
+\code{WHYFROM} variables.}
 }
 \value{
 a vector of activity codes using the following types:
   \code{home, work, school, pudo, other}
 }
 \description{
-This function requires a `home_codes`
+This function requires a `purposes$home_codes`
 object be included in the project environment.
 }
 

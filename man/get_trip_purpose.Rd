@@ -11,14 +11,14 @@ get_trip_purpose(o_purp, d_purp)
 variable}
 
 \item{d_purp}{a vector of destination purposes coded as in the NHTS
-  \code{WHYFROM} variable}
+\code{WHYFROM} variable}
 }
 \value{
 a vector of trip purposes on the following classification:
   \code{hbw, hbo, hbschool, nhbo, nhbw}
 }
 \description{
-This function requires `home_codes`, `work_codes`, and `school_codes`
-objects be included in the project environment.
+This function requires `purposes$home_codes`, `purposes$work_codes`, and
+`purposes$school_codes` objects be included in the project environment.
 }
 

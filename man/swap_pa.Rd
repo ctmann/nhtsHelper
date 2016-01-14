@@ -15,7 +15,7 @@ a data_frame with the p and a block and taz appended
 \description{
 This function determines if O and D need to be swapped to create a P and A
 record, and swaps them if necessary.
-This function requires a `home_codes`
+This function requires a `purposes$home_codes`
 object be included in the project environment.
 }
 
