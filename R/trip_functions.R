@@ -195,7 +195,8 @@ read_trips <- function(file, clean = TRUE, linkout = NULL){
         num_on_trip = trpaccmp
       ) %>%
       mutate(
-        mode = ifelse(mode %in% c("09", "10", "12", "14", "17", "18"),
+        mode = ifelse(mode %in% c("09", "10", "12", "13", "14", "16", "17", "18",
+                                  "24"),
                       "transit", mode),
         mode = ifelse(mode %in% c("22", "23"), "non-motorized", mode),
         mode = ifelse(mode %in% c("11"), "schoolbus", mode),
@@ -205,7 +206,7 @@ read_trips <- function(file, clean = TRUE, linkout = NULL){
         mode = ifelse(mode == "auto" & num_on_trip >= 1, "shared", mode),
         mode = ifelse(
           mode %in% c("auto", "shared", "non-motorized", "schoolbus", "transit"), 
-          mode, NA)
+          mode, "other")
       ) 
   }
   
